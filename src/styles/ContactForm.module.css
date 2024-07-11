@@ -1,0 +1,70 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 5px;
+}
+label{
+    font-family:"Manrope" ;
+    font-weight: medium;
+    font-size: 1.6rem;
+    line-height: ;
+    letter-spacing: ;
+}
+input,
+textarea {
+  background-color: rgba(72, 72, 72, 1);
+  color: white;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+.name,
+.email,
+.subject,
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.name label {
+}
+.name input {
+    height: 48px;
+}
+.email {
+}
+.email label {
+}
+.email input {
+    height: 48px;
+}
+.subject {
+}
+.subject label {
+}
+.subject input {
+    height: 48px;
+}
+.message {
+}
+.message label {
+}
+.message textarea {
+    height: 148px;
+}
+button {
+    outline: 0;
+    border: 0;
+    width: 140px;
+    height: 54px;
+    border-radius: 25px;
+    font-size: 1.6rem;
+    font-family: "Manrope";
+    font-weight: bold;
+    color: black;
+    background-color: rgba(211, 233, 122, 1);
+}

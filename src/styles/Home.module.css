@@ -18,8 +18,8 @@
 }
 .header{
     font-family: "Bebas Neue";
-    font-weight: 600;
-    font-size: 5.7rem;
+    font-weight: 200;
+    font-size: 5.2rem;
     text-transform: uppercase;
     padding: 0;
     letter-spacing: 0.1rem;
@@ -39,7 +39,8 @@
     background-color: rgba(211, 233, 122, 1);
     color: black;
     text-transform: uppercase;
-    width: 163px;
+    width: fit-content;
+    padding: 5px;
     height: 48px;
     border-radius: 25px;
     outline: 0;
@@ -51,6 +52,7 @@
     font-size: 1.4rem;
     letter-spacing: 0.1rem;
     font-weight: 600;
+    gap: 10px;
 }
 .action button span{
     background-color: black;
@@ -73,8 +75,12 @@
     width: 30px;
 }
 .hero_content_img{
-    width: 50%;
-    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero_content_img img{
+    border-radius: 5px;
 }
 
 .second_section{
@@ -92,8 +98,8 @@
     gap: 96px;
 }
 .more_projects{
-    font-family: ;
-    font-weight: "Bebas Neue";
+    font-family: "Bebas Neue" ;
+    font-weight: ;
     font-size: 3rem;
     letter-spacing: ;
     text-transform: uppercase;

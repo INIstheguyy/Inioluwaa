@@ -3,12 +3,13 @@ import styles from "../styles/Home.module.css";
 import contact from "../Assets/icon/contact.svg";
 import github from "../Assets/icon/github.svg";
 import linkedin from "../Assets/icon/linkedin.svg";
+import photo from "../Assets/image/ini-dp.jpg"
 import { useNavigate } from "react-router-dom";
 
 function Home() {
   const navigate = useNavigate();
   return (
-    <body>
+    <div>
       <section className={styles.first_section} id="">
         <div className={styles.hero_content}>
           <div className={styles.hero_content_text}>
@@ -27,16 +28,30 @@ function Home() {
               </span>
             </button>
             <span>
-              <img src={linkedin} alt="linkedin" />
+              <a
+                className={styles}
+                href="https://www.linkedin.com/in/inioluwa-komolafe-21684a213/"
+              >
+                <img src={linkedin} alt="" />
+              </a>
             </span>
             <span>
-              <img src={github} alt="github" />
+              <a className={styles} href="https://github.com/INIstheguyy">
+                <img src={github} alt="" />
+              </a>
             </span>
           </div>
         </div>
-        <div className={styles.hero_cotent_img}>
-          <img src={"ini"} alt="" />
+        <div className={styles.hero_content_img}>
+          <img src={photo} alt="" />
         </div>
+        <p className={styles.more_projects} onClick={() => navigate("/about")}>
+          {" "}
+          <span>
+            {" "}
+            more about me <img src={contact} alt="contact-me" />
+          </span>
+        </p>
       </section>
       <hr />
       <section className={styles.second_section} id="">
@@ -54,13 +69,14 @@ function Home() {
           onClick={() => navigate("/project")}
         >
           {" "}
-          <span> more projects</span> 
+          <span>
+            {" "}
+            more projects <img src={contact} alt="contact-me" />
+          </span>
         </p>
       </section>
-      <hr />
-      <section className={styles} id=""></section>
-      <section className={styles} id=""></section>
-    </body>
+      
+    </div>
   );
 }
 

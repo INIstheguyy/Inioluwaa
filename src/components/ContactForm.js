@@ -6,17 +6,10 @@ function ContactForm() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        subject: '',
         message: ''
       });
     
-      const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-          ...formData,
-          [name]: value
-        });
-      };
+      
     
       const handleSubmit = (e) => {
         e.preventDefault();
@@ -30,7 +23,6 @@ function ContactForm() {
               setFormData({
                 name: '',
                 email: '',
-                subject: '',
                 message: ''
               });
             },
@@ -49,7 +41,7 @@ function ContactForm() {
         id="name"
         name="name"
         value={formData.name}
-        onChange={handleChange}
+        onChange={(event) => setFormData({ ...formData, name: event.target.value})}
         placeholder="Enter your name"
         required
       />
@@ -61,30 +53,19 @@ function ContactForm() {
         id="email"
         name="email"
         value={formData.email}
-        onChange={handleChange}
+        onChange={(event) => setFormData({ ...formData, email: event.target.value})}
         placeholder="Enter your email"
         required
       />
     </div>
-    <div className={styles.subject}>
-    <label htmlFor="name">subject:</label>
-    <input
-      type="text"
-      id="subject"
-      name="subject"
-      value={formData.subject}
-      onChange={handleChange}
-      placeholder="Enter your subject"
-      required
-    />
-  </div>
+   
     <div className={styles.message}>
       <label htmlFor="message">Message:</label>
       <textarea
         id="message"
         name="message"
         value={formData.message}
-        onChange={handleChange}
+        onChange={(event) => setFormData({ ...formData, message: event.target.value})}
         placeholder="Enter your message"
         required
       />

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles/App.module.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+  import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Project from "./Pages/Project";
@@ -30,7 +30,6 @@ function App() {
       <RouterProvider router={router} />
       <hr />
       <footer>
-      
         <div className={styles.contact}>
           <div className={styles.contact_details}>
             <div className={styles.detail_info}>

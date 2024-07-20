@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 import contact from "../Assets/icon/contact.svg";
 import github from "../Assets/icon/github.svg";
 import linkedin from "../Assets/icon/linkedin.svg";
-import photo from "../Assets/image/ini-dp.jpg"
+
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -13,7 +13,9 @@ function Home() {
       <section className={styles.first_section} id="">
         <div className={styles.hero_content}>
           <div className={styles.hero_content_text}>
-            <p className={styles.header}>Hi, I am Inioluwa Komolafe.</p>
+            <p className={styles.header}>
+              Hi, I am <span>Ini</span>oluwa Komolafe.
+            </p>
             <p className={styles.sub_header}>
               {" "}
               A Nigerian based front-end developer passionate about building
@@ -21,37 +23,41 @@ function Home() {
             </p>
           </div>
           <div className={styles.action}>
-            <button>
-              Contact me
+            <div className={styles.action_first}>
+              <button>
+                Contact me
+                <span>
+                  <img src={contact} alt="contact-me" />
+                </span>
+              </button>
               <span>
-                <img src={contact} alt="contact-me" />
+                <a
+                  className={styles}
+                  href="https://www.linkedin.com/in/inioluwa-komolafe-21684a213/"
+                >
+                  <img src={linkedin} alt="" />
+                </a>
               </span>
-            </button>
-            <span>
-              <a
-                className={styles}
-                href="https://www.linkedin.com/in/inioluwa-komolafe-21684a213/"
+              <span>
+                <a className={styles} href="https://github.com/INIstheguyy">
+                  <img src={github} alt="" />
+                </a>
+              </span>
+            </div>
+            <div className={styles.action_second}>
+              <p
+                className={styles.more_projects}
+                onClick={() => navigate("/about")}
               >
-                <img src={linkedin} alt="" />
-              </a>
-            </span>
-            <span>
-              <a className={styles} href="https://github.com/INIstheguyy">
-                <img src={github} alt="" />
-              </a>
-            </span>
+                {" "}
+                <span>
+                  {" "}
+                  more about me <img src={contact} alt="contact-me" />
+                </span>
+              </p>
+            </div>
           </div>
         </div>
-        <div className={styles.hero_content_img}>
-          <img src={photo} alt="" />
-        </div>
-        <p className={styles.more_projects} onClick={() => navigate("/about")}>
-          {" "}
-          <span>
-            {" "}
-            more about me <img src={contact} alt="contact-me" />
-          </span>
-        </p>
       </section>
       <hr />
       <section className={styles.second_section} id="">
@@ -75,7 +81,6 @@ function Home() {
           </span>
         </p>
       </section>
-      
     </div>
   );
 }

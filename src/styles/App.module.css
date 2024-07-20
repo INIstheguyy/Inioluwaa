@@ -68,4 +68,40 @@ footer p{
     width: 100%;
   
   }
+  footer{
+    padding: 50px;
+  }
+  .contact{
+    flex-direction: row ;
+    align-items: center;
+  }
+  
+  .contact_details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  .detail_info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contact_form{
+    width: 100%;
+    
+  }
+  .detail_info{
+    gap: 50px ;
+  }
+  .detail_info .header{
+    font-size:9.2rem;
+    font-weight: 100;
+  }
+  .title{
+    font-size: 4.5rem;
+  }
+  .sub_title{
+    font-size: 2.5rem;
+  }
 }

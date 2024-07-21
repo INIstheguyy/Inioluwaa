@@ -35,3 +35,7 @@ a{
   text-decoration: none;
   color: inherit;
 }
+hr{
+  margin: 20px 0;
+  border: 3px solid ;
+}

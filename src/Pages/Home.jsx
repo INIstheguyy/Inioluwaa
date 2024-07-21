@@ -3,11 +3,13 @@ import styles from "../styles/Home.module.css";
 import contact from "../Assets/icon/contact.svg";
 import github from "../Assets/icon/github.svg";
 import linkedin from "../Assets/icon/linkedin.svg";
-
+import { projectdetails } from "../Utils/ProjectDetails";
 import { useNavigate } from "react-router-dom";
+import ProjectTemp from "../components/ProjectTemp";
 
 function Home() {
   const navigate = useNavigate();
+  const projectdetailsslice = projectdetails.slice(0,3)
   return (
     <div>
       <section className={styles.first_section} id="">
@@ -68,8 +70,14 @@ function Home() {
             front-end development.
           </p>
         </div>
-        <div className={styles.projects_body}></div>
-
+        <div className={styles.projects_body}>
+        {
+          projectdetailsslice.map((projectdetail, index) => (
+            <ProjectTemp liveUrl={projectdetail.liveUrl} githubUrl={projectdetail.githubUrl} projectImage={""} year={projectdetail.year} role={projectdetail.role} title={projectdetail.title} name={projectdetail.name} description={projectdetail.description}/>
+          ))
+        }
+       
+        </div>
         <p
           className={styles.more_projects}
           onClick={() => navigate("/project")}

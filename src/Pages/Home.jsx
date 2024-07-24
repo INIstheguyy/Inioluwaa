@@ -73,7 +73,7 @@ function Home() {
         <div className={styles.projects_body}>
         {
           projectdetailsslice.map((projectdetail, index) => (
-            <ProjectTemp liveUrl={projectdetail.liveUrl} githubUrl={projectdetail.githubUrl} projectImage={""} year={projectdetail.year} role={projectdetail.role} title={projectdetail.title} name={projectdetail.name} description={projectdetail.description}/>
+            <ProjectTemp key={index} liveUrl={projectdetail.liveUrl} githubUrl={projectdetail.githubUrl} projectImage={""} year={projectdetail.year} role={projectdetail.role} title={projectdetail.title} name={projectdetail.name} description={projectdetail.description}/>
           ))
         }
        

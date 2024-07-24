@@ -35,6 +35,14 @@ export const skills = [
         id: 9,
         skill:"MongoDB"
     },
+    {
+        id: 10,
+        skill:"Express"
+    },
+    {
+        id: 11,
+        skill:"FastAPI"
+    },
 ]
 export const experiences = [
     {

@@ -1,0 +1,78 @@
+.first_section {
+  padding: 10px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 100vh;
+  justify-content: center;
+}
+.second_section {
+  padding: 10px;
+}
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 10px;
+}
+.info_text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.header {
+  font-family: "Bebas Neue";
+  font-weight: 200;
+  font-size: 5.2rem;
+  text-transform: uppercase;
+  padding: 0;
+  letter-spacing: 0.1rem;
+}
+.title {
+  font-family: "Manrope";
+  font-weight: 200;
+  font-size: 2.4rem;
+  letter-spacing: 0.03rem;
+  /* text-transform: capitalize; */
+  text-align: left;
+}
+.sub_title {
+  font-family: "Manrope";
+  font-weight: 200;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  color: gray;
+}
+.project_body {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+@media only screen and (min-width: 1024px) {
+  .first_section {
+    padding: 50px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero_content {
+    flex-direction: row;
+  }
+  .header {
+    width: 100%;
+    font-size: 10.2rem;
+  }
+  .title {
+    font-size: 4.5rem;
+  }
+  .sub_title {
+    font-size: 2.5rem;
+  }
+  .second_section {
+    padding: 50px;
+    
+  }
+}

@@ -16,7 +16,7 @@ function Home() {
         <div className={styles.hero_content}>
           <div className={styles.hero_content_text}>
             <p className={styles.header}>
-              Hi, I am <span>Ini</span>oluwa Komolafe.
+               <span>Ini</span>oluwa Komolafe.
             </p>
             <p className={styles.sub_header}>
               {" "}
@@ -26,12 +26,6 @@ function Home() {
           </div>
           <div className={styles.action}>
             <div className={styles.action_first}>
-              <button>
-                Contact me
-                <span>
-                  <img src={contact} alt="contact-me" />
-                </span>
-              </button>
               <span>
                 <a
                   className={styles}
@@ -54,7 +48,7 @@ function Home() {
                 {" "}
                 <span>
                   {" "}
-                  more about me <img src={contact} alt="contact-me" />
+                   about me <img src={contact} alt="contact-me" />
                 </span>
               </p>
             </div>

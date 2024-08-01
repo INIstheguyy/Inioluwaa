@@ -5,9 +5,19 @@ import github from "../Assets/icon/github.svg";
 import linkedin from "../Assets/icon/linkedin.svg";
 import photo from "../Assets/image/ini-dp.jpg"
 import { skills, experiences } from "../Utils/SkillSet";
+import { useNavigate } from "react-router-dom";
+import { MdArrowBack } from "react-icons/md";
 function About() {
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate("/");
+  };
   return (
     <div className={styles.about}>
+    <div className={styles.navigation} onClick={handleBackClick}>
+          <MdArrowBack size={32} />
+        </div>
       <section className={styles.first_section} id="">
         <div className={styles.hero_content}>
           <p className={styles.header}>about me</p>
@@ -54,7 +64,7 @@ function About() {
             <img src={photo} alt="" />
           </div>
           <div className={styles.skill_content}>
-            <p className={styles.header}>my capabilities</p>
+            <p className={styles.header}>Tech stack</p>
             <div className={styles.skill_content_info}>
               <p className={styles.sub_title}>
                 I am always looking to add more skills.I specialize in

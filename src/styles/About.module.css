@@ -102,6 +102,8 @@
 }
 .skill_img img{
     border-radius: 5px;
+    max-width: 500px;
+    min-width: 300px;
 }
 .skill_content {
   display: flex;

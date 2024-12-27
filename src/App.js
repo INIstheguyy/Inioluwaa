@@ -9,6 +9,8 @@ import linkedin from "./Assets/icon/linkedin.svg";
 import twitter from "./Assets/icon/twitter.svg";
 import instagram from "./Assets/icon/instagram.svg";
 import ContactForm from "./components/ContactForm";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const router = createBrowserRouter([
@@ -78,6 +80,7 @@ function App() {
         </div>
         <p>© 2024 Inistheguyy.</p>
       </footer>
+      <ToastContainer />
     </div>
   );
 }

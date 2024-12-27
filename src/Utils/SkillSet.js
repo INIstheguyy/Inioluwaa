@@ -37,12 +37,9 @@ export const skills = [
     },
     {
         id: 10,
-        skill:"Express"
+        skill:"FireBase"
     },
-    {
-        id: 11,
-        skill:"FastAPI"
-    },
+    
 ]
 export const experiences = [
     {

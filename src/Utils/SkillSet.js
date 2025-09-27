@@ -1,61 +1,30 @@
 export const skills = [
-    {
-        id: 1,
-        skill:"HTML"
-    },
-    {
-        id: 2,
-        skill:"CSS"
-    },
-    {
-        id: 3,
-        skill:"JavaScript"
-    },
-    {
-        id: 4,
-        skill:"BootStrap"
-    },
-    {
-        id: 5,
-        skill:"TailwindCSS"
-    },
-    {
-        id: 6,
-        skill:"React-js"
-    },
-    {
-        id: 7,
-        skill:"Figma"
-    },
-    {
-        id: 8,
-        skill:"Node-js"
-    },
-    {
-        id: 9,
-        skill:"MongoDB"
-    },
-    {
-        id: 10,
-        skill:"FireBase"
-    },
-    
-]
+  { id: 1, skill: "HTML", icon: "devicon-html5-plain colored" },
+  { id: 2, skill: "CSS", icon: "devicon-css3-plain colored" },
+  { id: 3, skill: "JavaScript", icon: "devicon-javascript-plain colored" },
+  { id: 4, skill: "Bootstrap", icon: "devicon-bootstrap-plain colored" },
+  { id: 5, skill: "Tailwind", icon: "devicon-tailwindcss-plain colored" },
+  { id: 6, skill: "React", icon: "devicon-react-original colored" },
+  { id: 7, skill: "Figma", icon: "devicon-figma-plain colored" },
+  { id: 8, skill: "Node.js", icon: "devicon-nodejs-plain colored" },
+  { id: 9, skill: "MongoDB", icon: "devicon-mongodb-plain colored" },
+  { id: 10, skill: "Firebase", icon: "devicon-firebase-plain colored" },
+];
 export const experiences = [
-    {
-        id: 1,
-        role:"freelance developer",
-        startDate: "July 2023",
-        endDate: "present",
-        company: "",
-        description:"Skilled freelance developer with a passion for creating robust web applications and user-friendly interfaces. Proficient in modern technologies such as React, JavaScript, and CSS, I bring innovative solutions to life. Dedicated to delivering high-quality work, meeting deadlines, and exceeding client expectations."
-    },
-    {
-        id: 2,
-        role:"front-end developer intern",
-        startDate: "may 2024",
-        endDate: "present",
-        company: "motormata",
-        description:"Enthusiastic front-end developer intern with a keen eye for design and a passion for creating seamless user experiences. Proficient in HTML, CSS, and JavaScript, with hands-on experience in React. Committed to learning and contributing to dynamic projects while enhancing skills in modern web development practices."
-    },
-]
+  {
+    id: 1,
+    role: "Freelance Developer",
+    company: "Self-Employed",
+    period: "July 2023 – Present",
+    description:
+      "Build responsive web apps and user interfaces with React, JavaScript, and CSS. Deliver high-quality work on schedule while collaborating with diverse clients."
+  },
+  {
+    id: 2,
+    role: "Front-End Developer",
+    company: "Motormata",
+    period: "May 2024 – Present",
+    description:
+      "Implement UI components in React, translate Figma designs to code, and refine user experience through modern web practices."
+  },
+];

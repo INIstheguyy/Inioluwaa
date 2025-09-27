@@ -1,0 +1,80 @@
+/* ===== Base Mobile Styles ===== */
+.experienceTable {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Manrope";
+ 
+}
+
+.expRow {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+.expRow:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.expHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.expRole {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.expCompany {
+  font-size: 1.2rem;
+  color: rgba(211, 233, 122, 1);
+}
+
+.expCompany a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.expDate {
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+.expDescription {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: rgb(220, 220, 220);
+}
+
+/* ===== Tablet / Desktop Enhancements ===== */
+@media (min-width: 768px) {
+  .expHeader {
+    padding: 16px 0;
+    vertical-align: top;
+  }
+.expHeader div{
+    display: flex;
+    justify-content: space-between;
+      width: 50%;
+       text-align: left;
+}
+  .expRole {
+    font-size: 2rem;
+  }
+
+  .expCompany {
+    font-size: 1.6rem;
+  }
+
+  .expDate {
+    font-size: 1.6rem;
+  }
+}

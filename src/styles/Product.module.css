@@ -1,8 +1,9 @@
 .first_section {
-  padding: 10px;
+  /* padding: 30px; */
   text-align: justify;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
+  /* margin-top: 10rem; */
 }
 .navigation{
   border-radius: 100%;
@@ -30,12 +31,26 @@
 .second_section {
   padding: 10px;
 }
+.projects_body {
+ 
+  display: grid;
+
+  height: 100%;
+  gap: 100px; /* reduced for better spacing */
+
+
+  padding: 5px 7px; /* avoids scrollbar overlapping content */
+  flex: 1 1 auto; /* fill remaining vertical space */
+  scroll-snap-type: y proximity;
+}
+
 .hero_content {
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding-bottom: 10px;
   justify-content:center ;
+  margin-top: 5rem;
 }
 .info_text {
   display: flex;
@@ -59,32 +74,28 @@
   text-align: left;
 }
 .sub_title {
-  font-family: "Manrope";
-  font-weight: 200;
-  font-size: 1.5rem;
-  letter-spacing: 0.05rem;
-  color: gray;
+   font-family: "Crimson Pro", serif;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  font-size: 1.6rem;
+  color: rgb(233, 232, 232);
 }
-.project_body {
-  display: flex;
-  flex-direction: column;
-  gap: 96px;
-}
+
 @media only screen and (min-width: 1024px) {
   .first_section {
-    padding: 50px;
-    height: 100vh;
+    /* padding: 50px; */
+    /* height: 100vh; */
+     padding: 25px;
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
   }
   .hero_content {
-    flex-direction: row;
+    
   }
   .header {
     width: 100%;
-    font-size: 10.2rem;
+    font-size: 9.2rem;
   }
   .title {
     font-size: 4.5rem;
@@ -93,7 +104,11 @@
     font-size: 2.5rem;
   }
   .second_section {
-    padding: 50px;
+    /* padding: 50px; */
     
+  }
+  .projects_body{
+    gap: 150px;
+     grid-template-columns: auto auto;
   }
 }

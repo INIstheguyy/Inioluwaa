@@ -1,107 +1,379 @@
-.app {
-  background-color: rgba(10, 10, 10, 1);
-  color: white;
-  width: 100%;
-}
-footer{
-  padding: 10px;
-}
-.contact{
-  display: flex;
-  flex-direction: column;
- 
-  gap: 64px;
-}
-.contact_details{
+/* Main content with proper padding/* App.module.css */
 
+.app {
+  position: relative;
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
-.header{
-  font-family: "Bebas Neue";
-  font-weight: 600;
-  font-size: 5.7rem;
-  text-transform: uppercase;
-  padding: 0;
-  letter-spacing: 0.1rem;
+
+/* Fixed Navbar Container */
+.navbarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: height, backdrop-filter;
 }
-.sub_title{
-  font-family: "Manrope";
-  font-weight: 200;
-  font-size: 1.5rem;
- 
-  padding: 0;
-  letter-spacing: 0.05rem;
+
+/* Navbar background overlay */
+.navBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
-.sub_title span{
-  border-bottom: 1px solid rgba(211, 233, 122, 1);
+
+/* Navbar border */
+.navBorder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
 }
-.detail_icon{
-  width: 50%;
+
+/* Navbar content wrapper */
+.navContent {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Background container - fixed and full screen */
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: 0; /* behind content */
+  pointer-events: none; /* allow clicks through to content */
+  overflow: hidden;
+}
+
+/* Shared layer styling */
+.bgLayer {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(64px);
+  opacity: 0.28;
+  will-change: transform;
+}
+
+/* Tweak positions, sizes and gradients for depth */
+.layer1 {
+  width: 320px;
+  height: 320px;
+  left: -8%;
+  top: 8%;
+  background: radial-gradient(circle at 30% 30%, #6e45e2, #88d3ce 60%);
+}
+
+.layer2 {
+  width: 420px;
+  height: 420px;
+  right: 6%;
+  top: 18%;
+  background: radial-gradient(circle at 70% 30%, #ff6ec7, #6e45e2 60%);
+  opacity: 0.22;
+}
+
+.layer3 {
+  width: 520px;
+  height: 520px;
+  right: -12%;
+  bottom: -6%;
+  background: radial-gradient(circle at 40% 60%, #88d3ce, #6e45e2 60%);
+  opacity: 0.16;
+}
+
+/* Content above background */
+.content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* Main content with proper padding for truly fixed navbar */
+.mainContent {
+  padding-top: 100px; /* Space for the fixed navbar */
+  min-height: calc(100vh - 100px);
+}
+
+/* Adjust padding when navbar is scrolled (smaller) */
+@media (min-width: 768px) {
+  .mainContent {
+    padding-top: 110px; /* More space for larger navbar on desktop */
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainContent {
+    padding-top: 120px; /* Even more space for largest navbar */
+  }
+}
+
+/* Footer */
+.footer {
+  margin-top: 5rem;
+  padding: 2rem ;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px 12px 0 0;
 }
-.contact_form{
 
+.footer p {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+  margin: 0;
+  transition: all 0.3s ease;
+  cursor: default;
 }
-footer p{
-  font-family: "Manrope";
-  font-size: 2rem;
-  font-weight: 100 ;
-  line-height: 5rem;
-  letter-spacing: 0.05rem ;
+
+.footer p:hover {
+  color: #6e45e2;
+  transform: translateY(-2px);
 }
-@media only screen and (min-width: 580px) {
-  .app {
-    width: 100%;
-    
+
+/* Contact page styles */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem 0;
+}
+
+.contact_details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.1rem;
+  line-height: 0.9;
+}
+
+.sub_title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 200;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
+}
+
+.sub_title span {
+  border-bottom: 1px solid rgba(211, 233, 122, 1);
+  padding-bottom: 2px;
+}
+
+.detail_icon {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.contact_form {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 479px) {
+  .navContent {
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .mainContent {
+    padding-top: 80px;
+  }
+  
+  .header {
+    font-size: 3rem;
+  }
+  
+  .footer {
+  
+    gap: 1rem;
+    text-align: center;
+    padding: 1.5rem ;
+  }
+  
+  .footer p {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .header {
+    font-size: 4.5rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .app {
-    width: 100%;
-   
+  .content {
+    width: 90%;
+  }
+  
+  .mainContent {
+    padding-top: 100px;
+  }
+  
+  .header {
+    font-size: 5.7rem;
+  }
+  
+  .sub_title {
+    font-size: 1.5rem;
+  }
+  
+  .footer p {
+    font-size: 1.5rem;
   }
 }
+
 @media only screen and (min-width: 1024px) {
-  .app {
-    width: 100%;
-  
-  }
-  footer{
-    padding: 50px;
-  }
-  .contact{
-    flex-direction: row ;
-    align-items: center;
+  .content {
+    width: 90%;
+    max-width: 1200px;
   }
   
-  .contact_details{
-    width: 100%;
+  .mainContent {
+    padding-top: 120px;
+  }
+  
+  .contact {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 6rem;
+  }
+
+  .contact_details {
+    width: 50%;
+    gap: 5rem;
+  }
+  
+  .contact_form {
+    width: 50%;
+  }
+
+  .detail_info {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 3rem;
   }
-  .detail_info{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+
+  .header {
+    font-size: 7rem;
+    font-weight: 400;
   }
-  .contact_form{
-    width: 100%;
-    
+  
+  .sub_title {
+    font-size: 2rem;
   }
-  .detail_info{
-    gap: 50px ;
+  
+  .footer {
+    padding: 2.5rem ;
   }
-  .detail_info .header{
-    font-size:9.2rem;
+  
+  .footer p {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .header {
+    font-size: 9.2rem;
     font-weight: 100;
   }
-  .title{
-    font-size: 4.5rem;
-  }
-  .sub_title{
+  
+  .sub_title {
     font-size: 2.5rem;
   }
+  
+  .footer p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+/* Performance optimizations */
+.navbarContainer,
+.navContent,
+.bgLayer {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Account for fixed navbar */
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .navBackground {
+    background: rgba(0, 0, 0, 0.95);
+  }
+  
+  .footer {
+    border-top: 2px solid #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .navContent,
+  .footer p {
+    transition: none !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Focus states for accessibility */
+.footer p:focus-visible {
+  outline: 2px solid #6e45e2;
+  outline-offset: 4px;
+  border-radius: 4px;
 }

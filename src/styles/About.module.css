@@ -1,19 +1,19 @@
 .first_section {
-  padding: 10px;
-  text-align: justify;
+  text-align: left;
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-bottom: 15rem;
 }
 .second_section {
-    padding: 10px;
-    text-align: justify;
-  }
+  text-align: left;
+}
 .hero_content {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-bottom: 10px;
+  margin-top: 5rem;
+  vertical-align: top;
 }
 .header {
   font-family: "Bebas Neue";
@@ -27,6 +27,10 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  flex: 1;
+}
+.content_media {
+  flex: 1;
 }
 .info_text {
   display: flex;
@@ -41,54 +45,31 @@
   text-transform: capitalize;
 }
 .sub_title {
-  font-family: "Manrope";
-  font-weight: 200;
-  font-size: 1.5rem;
-  letter-spacing: 0.05rem;
-  color: gray;
+  font-family: "Crimson Pro", serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: rgb(233, 232, 232);
+  letter-spacing: 0.2rem;
 }
 
 .action {
   display: flex;
   gap: 16px;
 }
-.action button {
-  background-color: rgba(211, 233, 122, 1);
-  color: black;
-  text-transform: uppercase;
-  width: fit-content;
-  padding: 5px;
-  height: 48px;
-  border-radius: 25px;
-  outline: 0;
-  border: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-family: "Manrope";
-  font-size: 1.4rem;
-  letter-spacing: 0.1rem;
-  font-weight: 600;
-  gap: 10px;
-}
-.action button span {
-  background-color: black;
-  padding: 10px;
-  border-radius: 25px;
-  width: 40px;
-  height: 40px;
-}
-.action span {
-  background-color: gray;
+
+.action a {
+  /* background-color: gray; */
   width: 48px;
   height: 48px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  transition: all 0.3s ease;
 }
-.action span img {
-  width: 30px;
+
+.action a:hover {
+  transform: translateY(-4px);
 }
 .skill {
   display: flex;
@@ -96,14 +77,12 @@
   gap: 45px;
 }
 .skill_img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.skill_img img{
-    border-radius: 5px;
-    max-width: 500px;
-    min-width: 300px;
+.skill_img img {
+  border-radius: 5px;
 }
 .skill_content {
   display: flex;
@@ -131,12 +110,44 @@
   flex-direction: column;
   gap: 15px;
 }
+.experience_header {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.experience_header button {
+  background-color: rgba(211, 233, 122, 1);
+  color: black;
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 15px;
+  height: 48px;
+  border-radius: 25px;
+  outline: 0;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Manrope";
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  gap: 10px;
+}
+.experience_header button span {
+  background-color: black;
+  padding: 10px;
+  border-radius: 25px;
+  width: 40px;
+  height: 40px;
+}
 .experience_content {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-.exp_content_info{
+.exp_content_info {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -153,58 +164,68 @@
   font-weight: 600;
   font-family: "Manrope";
   color: rgba(211, 233, 122, 1);
-  
 }
-.company a{
-    border-bottom: 1px solid;
+.company a {
+  border-bottom: 1px solid;
 }
 @media only screen and (min-width: 1024px) {
-  .first_section, .second_section{
-    padding: 50px;
+  .first_section,
+  .second_section {
+    /* padding: 50px; */
     gap: 48px;
-}
-  .hero_content{
+  }
+  .hero_content {
     display: flex;
     flex-direction: row;
-    height: 100vh;
-    padding: 50px 0;
+    gap: 50px;
+    padding: 25px;
   }
-  .hero_content .header{
-    width: 200%;
-    font-size: 10.2rem;
+  .hero_content .header {
+    font-size: 9.2rem;
   }
-  .info_text{
-   
+  .content_info {
   }
-  .title{
+  .content_media {
+    width: 100%;
+  }
+
+  .title {
     font-size: 4.5rem;
   }
-  .sub_title{
-    font-size: 2.5rem;
+  .sub_title {
+    font-size: 2.1rem;
   }
-  .skill{
+  .skill {
     flex-direction: row;
-    height: 100vh;
+
     align-items: center;
   }
-  .skill .header{
-    font-size: 10.2rem;
+  .skills .header {
+    font-size: 7rem;
   }
-  .skill_img{
-    width: 150%;
+  .skill_img {
   }
-  .skill_content_info{
+  .skill_img img {
+    width: 400px;
+    height: 100%;
+  }
+  .skill_content_info {
     gap: 50px;
   }
-  .company{
+  .company {
     font-size: 3rem;
   }
-  .experience .header{
-    font-size: 10.2rem;
+  .experience .header {
+    font-size: 7rem;
+  }
+  .experience_header{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
-.navigation{
+.navigation {
   border-radius: 100%;
   border: 4px solid white;
   position: fixed;
@@ -217,7 +238,11 @@
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {

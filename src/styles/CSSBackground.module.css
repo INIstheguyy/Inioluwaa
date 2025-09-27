@@ -1,0 +1,273 @@
+/* CSSBackground.module.css */
+
+.backgroundContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Base gradient background */
+.gradientBase {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Animated mesh grid */
+.meshGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.gridLine {
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(102, 126, 234, 0.3) 50%,
+    transparent 100%
+  );
+  transform-origin: center;
+}
+
+.gridLineHorizontal {
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(118, 75, 162, 0.2) 50%,
+    transparent 100%
+  );
+  transform-origin: center;
+}
+
+/* Particle system */
+.particleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.particle {
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(102, 126, 234, 0.8) 0%,
+    rgba(118, 75, 162, 0.4) 50%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  filter: blur(1px);
+  will-change: transform;
+}
+
+/* Geometric shapes container */
+.shapesContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Rotating rings */
+.rotatingRing {
+  position: absolute;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  border-radius: 50%;
+  border-top-color: rgba(118, 75, 162, 0.4);
+  border-right-color: transparent;
+  will-change: transform;
+}
+
+/* Floating shapes */
+.floatingTriangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid rgba(102, 126, 234, 0.15);
+  will-change: transform;
+}
+
+.floatingSquare {
+  position: absolute;
+  background: rgba(118, 75, 162, 0.1);
+  border: 1px solid rgba(118, 75, 162, 0.3);
+  border-radius: 4px;
+  will-change: transform;
+}
+
+/* Interactive light effect */
+.interactiveLight {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(102, 126, 234, 0.2) 0%,
+    rgba(118, 75, 162, 0.1) 30%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(20px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Noise texture overlay */
+.noiseOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  background-image: 
+    radial-gradient(circle at 25% 25%, #667eea 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, #764ba2 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, #667eea 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px, 70px 70px;
+  animation: noiseAnimation 20s linear infinite;
+}
+
+@keyframes noiseAnimation {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-10px, -10px) rotate(90deg); }
+  50% { transform: translate(10px, -10px) rotate(180deg); }
+  75% { transform: translate(-10px, 10px) rotate(270deg); }
+}
+
+/* Enhanced floating elements for main app */
+.floatingContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floatingOrb {
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(118, 75, 162, 0.05) 50%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  filter: blur(2px);
+  will-change: transform;
+}
+
+.floatingShape {
+  position: absolute;
+  background: linear-gradient(
+    45deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(118, 75, 162, 0.05) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  will-change: transform;
+}
+
+/* Performance optimizations */
+.backgroundContainer *,
+.floatingContainer * {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .rotatingRing {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  
+  .interactiveLight {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .particle {
+    filter: blur(0.5px);
+  }
+  
+  .noiseOverlay {
+    opacity: 0.02;
+  }
+}
+
+@media (max-width: 480px) {
+  .meshGrid {
+    opacity: 0.3;
+  }
+  
+  .particleContainer .particle:nth-child(n+50) {
+    display: none; /* Hide half the particles on mobile for performance */
+  }
+  
+  .shapesContainer > *:nth-child(n+4) {
+    display: none; /* Hide some shapes on mobile */
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .rotatingRing,
+  .particle,
+  .floatingTriangle,
+  .floatingSquare,
+  .interactiveLight,
+  .noiseOverlay {
+    animation: none !important;
+  }
+  
+  .backgroundContainer * {
+    transform: none !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .gradientBase {
+    background: #000000 !important;
+  }
+  
+  .gridLine,
+  .gridLineHorizontal {
+    background: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .particle {
+    background: rgba(255, 255, 255, 0.8) !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .backgroundContainer {
+    display: none;
+  }
+}

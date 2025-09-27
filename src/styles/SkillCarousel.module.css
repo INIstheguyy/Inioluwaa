@@ -1,0 +1,328 @@
+/* SkillCarousel.module.css */
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0,0,0,1) 10%,
+    rgba(0,0,0,1) 90%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0,0,0,1) 10%,
+    rgba(0,0,0,1) 90%,
+    transparent 100%
+  );
+}
+
+.carouselTrack {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  will-change: transform;
+  cursor: grab;
+}
+
+.carouselTrack:active {
+  cursor: grabbing;
+}
+
+/* Individual skill item */
+.skillItem {
+  flex: 0 0 auto;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 12px 8px;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.skillItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.05) 0%,
+    rgba(118, 75, 162, 0.05) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.skillItem:hover::before {
+  opacity: 1;
+}
+
+.skillItem:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Icon container */
+.iconContainer {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 6px;
+}
+
+.skillIcon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.skillItem:hover .skillIcon {
+  transform: scale(1.1);
+}
+
+/* Icon loading skeleton */
+.iconSkeleton {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Fallback icon */
+.iconFallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+/* Skill label */
+.skillLabel {
+   font-family: "Manrope";
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.skillItem:hover .skillLabel {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Gradient overlays for smooth edges */
+.gradientLeft,
+.gradientRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.gradientLeft {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(12, 12, 12, 1) 0%,
+    rgba(12, 12, 12, 0.8) 30%,
+    transparent 100%
+  );
+}
+
+.gradientRight {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(12, 12, 12, 1) 0%,
+    rgba(12, 12, 12, 0.8) 30%,
+    transparent 100%
+  );
+}
+
+/* Responsive Design - Mobile First */
+@media (min-width: 480px) {
+  .carouselTrack {
+    gap: 16px;
+  }
+  
+  .skillItem {
+    height: 110px;
+    padding: 16px 10px;
+  }
+  
+  .iconContainer {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .skillLabel {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .carouselTrack {
+    gap: 20px;
+  }
+  
+  .skillItem {
+    height: 120px;
+    padding: 18px 12px;
+    border-radius: 18px;
+  }
+  
+  .iconContainer {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+  }
+  
+  .skillLabel {
+    font-size: 0.85rem;
+  }
+  
+  .gradientLeft,
+  .gradientRight {
+    width: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skillItem {
+    height: 140px;
+    padding: 20px 14px;
+    border-radius: 20px;
+  }
+  
+  .iconContainer {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+  }
+  
+  .skillLabel {
+    font-size: 1.3rem;
+  }
+  
+  .gradientLeft,
+  .gradientRight {
+    width: 50px;
+  }
+}
+
+/* Performance optimizations */
+.carouselTrack,
+.skillItem {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .carouselTrack {
+    animation: none !important;
+  }
+  
+  .skillItem:hover {
+    transform: none !important;
+  }
+  
+  .skillIcon {
+    transition: none !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .skillItem {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .skillItem:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .skillLabel {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+  }
+}
+
+/* Focus states for keyboard navigation */
+.skillItem:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Loading states */
+.skillItem.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.skillItem.error .iconContainer {
+  background: rgba(255, 69, 69, 0.1);
+  border: 1px solid rgba(255, 69, 69, 0.3);
+}

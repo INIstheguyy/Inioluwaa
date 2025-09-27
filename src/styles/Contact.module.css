@@ -1,0 +1,95 @@
+.contact {
+  width: 100%;
+
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  /* background: #0f0f0f; dark minimal background */
+  color: #eaeaea;
+}
+
+.textBlock {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(5rem, 6vw, 9rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: rgba(211, 233, 122, 1);
+  border-bottom: 1px solid rgba(211, 233, 122, 1);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.highlight:hover {
+  color: #fff;
+}
+
+.socials {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socials a {
+  /* background-color: gray; */
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  transform: translateY(-4px);
+}
+
+.formBlock {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .contact {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 6rem;
+    gap: 6rem;
+  }
+
+  .textBlock,
+  .formBlock {
+    flex: 1;
+    text-align: left;
+  }
+
+  .socials {
+    justify-content: flex-start;
+  }
+}

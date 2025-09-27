@@ -1,165 +1,245 @@
-
-.first_section{
-    display: flex;
-    flex-direction: column;
-    gap: 52px;
-    padding: 12.5px;
-    height: 100vh;
-    justify-content: center;
-
+.first_section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15rem;
 }
-.hero_content{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  -webkit-box-align: center;
+  /* align-items: center; */
+  -webkit-box-pack: center;
+  justify-content: center;
+ margin-top: 5rem;
 }
-.hero_content_text{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.hero_content_text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.header{
-    font-family: "Bebas Neue";
-    font-weight: 200;
-    font-size: 5.2rem;
-    text-transform: uppercase;
-    padding: 0;
-    letter-spacing: 0.1rem;
+.first_section .header {
+  font-size: 6rem;
 }
-.header span{
-    color: rgba(211, 233, 122, 1);
+.header {
+  display: block;
+  white-space: normal;
+  overflow-wrap: break-word;
+  font-family: "Bebas Neue";
+  font-weight: 200;
+  font-size: 6rem;
+  letter-spacing: 5.9px;
+  text-transform: uppercase;
+  padding-left: 5px;
 }
-.sub_header{
-    font-family: "Manrope";
-    font-weight: 300;
-    letter-spacing: 0.1rem;
-    font-size: 1.5rem;
-    color: rgba(199, 199, 199, 1);
+.header span {
+  color: white;
 }
-.action{
-    display: flex;
-    gap: 35px;
-    align-items: center;
-    justify-content: space-between;
-    
+.sub_header {
+  font-family: "Crimson Pro", serif;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  font-size: 1.6rem;
+  color: rgb(233, 232, 232);
 }
-.action_first{
-    display: flex;
-    gap: 16px;
+.sub_header span {
+  display: inline-block;
+  white-space: pre;
+  text-align: justify;
 }
-.action_first button{
-    background-color: rgba(211, 233, 122, 1);
-    color: black;
-    text-transform: uppercase;
-    width: fit-content;
-    padding: 5px;
-    height: 48px;
-    border-radius: 25px;
-    outline: 0;
-    border: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-family: "Manrope";
-    font-size: 1.4rem;
-    letter-spacing: 0.1rem;
-    font-weight: 600;
-    gap: 10px;
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
 }
-.action_first button span{
-    background-color: black;
-    padding: 10px;
-    border-radius: 25px;
-    width: 40px;
-    height: 40px;
+.action_end {
+  display: flex;
+  justify-content: flex-end;
 }
-.action_first span{
-    background-color:gray ;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-
-}
-.action_first span img{
-    width: 30px;
-}
-.hero_content_img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.hero_content_img img{
-    border-radius: 5px;
+.action_right_end {
+  display: none;
+  gap: 12px;
 }
 
-.second_section{
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    padding: 12.5px;
+.btn {
+  background-color: rgba(211, 233, 122, 1);
+  color: black;
+  font-family: "Manrope";
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
 }
-.project_header{
 
+.btn:hover {
+  background-color: black;
+  color: white;
 }
-.project_body{
-    display: flex;
-    flex-direction: column;
-    gap: 96px;
+
+/* Right side socials */
+.action_right {
+  display: flex;
+  gap: 12px;
 }
-.more_projects{
-    font-family: "Bebas Neue" ;
-    font-weight: ;
-    font-size: 3rem;
-    letter-spacing: ;
-    text-transform: uppercase;
-    width: fit-content;
-    color: rgba(211, 233, 122, 1);
-    cursor: pointer;
-    outline: ;
-    border-bottom: 1px solid rgba(211, 233, 122, 1);
+
+.action_right a {
+  /* background-color: gray; */
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
 }
-.more_projects span{
-    padding: 10px;
+
+.action_right a:hover {
+  transform: translateY(-4px);
+}
+
+
+
+.hero_content_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero_content_img img {
+  border-radius: 5px;
+}
+
+.second_section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  /* padding: 12.5px; */
+  height: 100vh;
+  overflow: hidden; /* hide overflowing content of the section itself */
+}
+.second_section .header{
+  letter-spacing: 0;
+}
+.projects_body {
+  background-color: rgb(26, 26, 26);
+  display: grid;
+  height: 100%;
+  gap: 120px; /* reduced for better spacing */
+  overflow-y: auto; /* allow vertical scroll */
+
+  padding: 5px 7px; /* avoids scrollbar overlapping content */
+  flex: 1 1 auto; /* fill remaining vertical space */
+  scroll-snap-type: y proximity;
+}
+
+/* Optional: smooth scroll for snapping effect */
+.projects_body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.projects_body::-webkit-scrollbar-thumb {
+  background-color: rgba(211, 233, 122, 0.6);
+  border-radius: 3px;
+}
+
+.projects_body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project_body > * {
+  scroll-snap-align: start;
+}
+
+.more_projects {
+  font-family: "Bebas Neue";
+  font-weight: ;
+  font-size: 3rem;
+  letter-spacing: ;
+  text-transform: uppercase;
+  width: fit-content;
+  color: rgba(211, 233, 122, 1);
+  cursor: pointer;
+  outline: ;
+  /* border-bottom: 1px solid rgba(211, 233, 122, 1); */
+}
+.more_projects span {
+  padding: 10px;
 }
 
 @media only screen and (min-width: 1024px) {
-    .first_section, .second_section{
-        padding: 50px;
-        gap: 48px;
-    }
-    .hero_content{
-        gap: 60px;
-        height: 100vh;
-        text-align: center;
-        justify-content: center;
-        padding: 0 50px ;
-    }
-    .header{
-     
-        font-size: 10.2rem;
-    
-    }
-
-
-    .sub_header{
-   
-        font-size: 4.5rem;
-     
-       
-    }
-    .action button{
-        font-size: 3.0rem;
-    }
-    .more_projects{
-        font-size: 6rem;
-    }
-    .action{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .first_section{
+     padding: 25px; 
+    gap: 20px;
+    margin-bottom: 0;
+    height: 100vh;
   }
+  .second_section {
+   padding: 25px; 
+    gap: 20px;
+    margin-bottom: 0;
+  }
+
+  .hero_content {
+    gap: 60px;
+    /* height: 100vh; */
+    text-align: left;
+    justify-content: flex-start;
+    
+  }
+
+  .hero_content_text div {
+    display: flex;
+    justify-content: start;
+  }
+  .header span {
+    font-size: 9.2rem;
+  }
+
+  .sub_header {
+    font-size: 3.5rem;
+  }
+  .second_section .header {
+    font-size: 7rem;
+    padding: 0;
+  }
+  .second_section .sub_header {
+    font-size: 3.5rem;
+  }
+  .action button {
+    font-size: 3rem;
+  }
+  /* .projects_header{
+    padding-bottom: 50px;
+  } */
+  .projects_body {
+    margin: 0px 0;
+    padding: 10px 25px;
+  }
+  .more_projects {
+    font-size: 3.5rem;
+  }
+  .action {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .action_left {
+    visibility: visible;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .action_right_end {
+    display: flex;
+    gap: 12px;
+  }
+}

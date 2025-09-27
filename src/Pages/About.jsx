@@ -4,112 +4,123 @@ import download from "../Assets/icon/download.svg";
 import github from "../Assets/icon/github.svg";
 import linkedin from "../Assets/icon/linkedin.svg";
 import photo from "../Assets/image/IMG_3535.jpg";
-import { skills, experiences } from "../Utils/SkillSet";
-import { useNavigate } from "react-router-dom";
-import { MdArrowBack } from "react-icons/md";
-function About() {
-  const navigate = useNavigate();
+import { FaGithub, FaLinkedin, FaReddit, FaTwitter } from "react-icons/fa";
+import ExperienceTable from "../components/ExperienceTable";
+import { motion } from "framer-motion";
+import SkillCarousel from "../components/SkillCarousel";
 
-  const handleBackClick = () => {
-    navigate("/");
-  };
+function About() {
   return (
     <div className={styles.about}>
-      <div className={styles.navigation} onClick={handleBackClick}>
+      {/* <div className={styles.navigation} onClick={handleBackClick}>
         <MdArrowBack size={32} />
-      </div>
+      </div> */}
       <section className={styles.first_section} id="">
         <div className={styles.hero_content}>
-          <p className={styles.header}>about me</p>
           <div className={styles.content_info}>
             <div className={styles.info_text}>
-              <p className={styles.title}>
-                I am a front-end developer based in Nigeria.
+              <motion.p
+                className={styles.header}
+                initial={{ y: -60, opacity: 0 }} // start 60px above and invisible
+                animate={{ y: 0, opacity: 1 }} // drop to normal spot and fade in
+                transition={{
+                  duration: 1.7, // total animation time
+                  ease: [0.25, 0.8, 0.25, 1], // a smooth “ease-out” curve
+                }}
+              >
+                about me
+              </motion.p>
+              <p className={styles.sub_title}>
+                I’m a front-end developer with a fresh Computer Science degree
+                and a passion for building clean, accessible, and visually
+                engaging web experiences. My current work centers on modern
+                React development, but I’m also diving into mobile app
+                development to broaden my skill set and eventually transition
+                into full-stack engineering and Web3 projects.
               </p>
               <p className={styles.sub_title}>
-                I LOVE exciting opportunities. However, I am Passionate about
-                accessibility when developing and curious about solving
-                problems. Currently, I’m exploring Reactjs, Webflow and a bit of
-                Designing. While I am not programming, I enjoy playing football,
-                spending time with my friends & family and staying indoor.I do
-                have a Computer Science background and I'm always Learning more
-                to improve skill
+                Outside the editor, I’m fascinated by the analysis and business
+                of football—from tactical breakdowns to the economics behind the
+                sport. I have a deep curiosity for human psychology, often
+                exploring it through podcasts, as well as historical and
+                narcotics-related documentaries that reveal how people and
+                societies evolve.
               </p>
+              <p className={styles.sub_title}>
+                At my core, I’m motivated by learning, problem-solving, and the
+                challenge of turning complex ideas into intuitive digital
+                experiences.
+              </p>
+              <p className={styles.sub_title}></p>
             </div>
             <div className={styles.action}>
-              <button>
-                Download Resume
-                <span>
-                  <img src={download} alt="contact-me" />
-                </span>
-              </button>
-              <span>
-                <a
-                  className={styles}
-                  href="https://www.linkedin.com/in/inioluwa-komolafe-21684a213/"
-                >
-                  <img src={linkedin} alt="" />
-                </a>
-              </span>
-              <span>
-                <a className={styles} href="https://github.com/INIstheguyy">
-                  <img src={github} alt="" />
-                </a>
-              </span>
+              <a
+                href="https://www.linkedin.com/in/inioluwa-komolafe-5815a7380"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin size={30} />
+              </a>
+              <a
+                href="https://github.com/INIstheguyy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub size={30} />
+              </a>
+              <a
+                href="https://x.com/INIstheguyy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter size={30} color="rgba(211, 233, 122, 1);" />
+              </a>
+              <a
+                href="https://www.reddit.com/user/INIstheguyy/"
+                aria-label="Instagram"
+                rel="noopener noreferrer"
+              >
+                <FaReddit size={30} color="rgba(211, 233, 122, 1);" />
+              </a>
+            </div>
+          </div>
+          <div styles={styles.content_media}>
+            <div className={styles.skill_img}>
+              <img src={photo} alt="" />
             </div>
           </div>
         </div>
-        <div className={styles.skill}>
-          <div className={styles.skill_img}>
-            <img src={photo} alt="" />
-          </div>
-          <div className={styles.skill_content}>
-            <p className={styles.header}>Tech stack</p>
-            <div className={styles.skill_content_info}>
-              <p className={styles.sub_title}>
-                I am always looking to add more skills.I specialize in
-                transforming design concepts into clean and user-friendly
-                interfaces & crafting responsive websites. With a keen eye for
-                detail and a passion for creativity, I strive to deliver
-                engaging, visually appealing, and functional solutions that
-                exceed expectations.
-              </p>
-              <div className={styles.skill_set}>
-                {skills.map((skill, index) => (
-                  <button key={index}>{skill.skill}</button>
-                ))}
-              </div>
-            </div>
+
+        <div className={styles.skills}>
+          <p className={styles.header}>Tech stack</p>
+          <div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              style={{ marginTop: "1rem" }}
+            >
+              <SkillCarousel direction="right" speed={40} />
+            </motion.div>
           </div>
         </div>
       </section>
-      <hr />
+
       <section className={styles.second_section} id="">
         <div className={styles.experience}>
-          <p className={styles.header}>my experience</p>
+          <div className={styles.experience_header}>
+            <p className={styles.header}>Work History</p>
+            <button>
+              Download Resume
+              <span>
+                <img src={download} alt="contact-me" />
+              </span>
+            </button>
+          </div>
+
           <div className={styles.experience_content}>
-            {experiences.map((experience, index) => (
-              <div key={index} className={styles.exp_content_info}>
-                <div className={styles.info_top_layer}>
-                  <div className={styles.upper_layer}>
-                    <p className={styles.title}>{experience.role}</p>
-                    <p className={styles.sub_title}>
-                      <span>{experience.startDate}</span> -{" "}
-                      <span>{experience.endDate}</span>
-                    </p>
-                  </div>
-                  <p className={styles.company}>
-                    {" "}
-                    <a href="https://www.motormata.com">
-                      {experience.company}
-                    </a>{" "}
-                  </p>
-                </div>
-                <div className={styles.info_bottom_layer}>
-                  <p className={styles.sub_title}>{experience.description}</p>
-                </div>
-              </div>
-            ))}
+            <ExperienceTable />
           </div>
         </div>
         <div className={styles}></div>

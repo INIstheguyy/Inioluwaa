@@ -1,11 +1,12 @@
 // projectdetails.js
 
-import blogpost from "../Assets/image/Blog-post.png"
-import countryApi from '../Assets/image/country-API.png'
-import manage from "../Assets/image/manage-landing-page.png"
-import rpsgame from "../Assets/image/R-P-S-game.png"
-import filter from "../Assets/image/job-filter.png"
-import space from "../Assets/image/space-landing-page.png"
+import blogpost from "../Assets/image/Blog-post.png";
+import countryApi from "../Assets/image/country-API.png";
+import manage from "../Assets/image/manage-landing-page.png";
+import rpsgame from "../Assets/image/R-P-S-game.png";
+import filter from "../Assets/image/job-filter.png";
+import space from "../Assets/image/space-landing-page.png";
+import taskmanger from "../Assets/image/task-manager.png";
 
 export const projectdetails = [
   {
@@ -21,15 +22,16 @@ export const projectdetails = [
   },
   {
     id: 2,
-    name: " Space tourism website",
-    img: space,
-    title: "space-tourism-landing-page ",
+    name: "Task-Manager",
+    img: taskmanger,
+    title: "Task Management App",
     description:
-      "The challenge was to build out this multi-page space tourism website,get it looking as close to the design as possible & enable users to view the optimal layout for each of the website's pages depending on their device's screen size",
-    year: "2023",
-    liveUrl: "https://dnbspacetourism.netlify.app/",
-    githubUrl: "https://github.com/INIstheguyy/space-tourism-landing-page",
+      "A task management web application developed with React, TypeScript, and Vite. It features task creation, organization, and tracking within a responsive interface, showcasing best practices in modern React development.",
+    year: "2025",
+    liveUrl: "https://task-mgt-proj.netlify.app/",
+    githubUrl: "https://github.com/INIstheguyy/task-mgt-app",
   },
+
   {
     id: 3,
     name: "Blog-post",
@@ -52,7 +54,7 @@ export const projectdetails = [
     liveUrl: "https://dnbjoblistingg.netlify.app",
     githubUrl: "https://github.com/INIstheguyy/job-listing",
   },
-  
+
   {
     id: 5,
     name: "Rock-paper-scissors",
@@ -74,5 +76,16 @@ export const projectdetails = [
     year: "2022",
     liveUrl: "https://dnbmanagelandingpage.netlify.app/",
     githubUrl: "https://github.com/INIstheguyy/manage-landing-page-master",
-  }
+  },
+  {
+    id: 7,
+    name: " Space tourism website",
+    img: space,
+    title: "space-tourism-landing-page ",
+    description:
+      "The challenge was to build out this multi-page space tourism website,get it looking as close to the design as possible & enable users to view the optimal layout for each of the website's pages depending on their device's screen size",
+    year: "2023",
+    liveUrl: "https://dnbspacetourism.netlify.app/",
+    githubUrl: "https://github.com/INIstheguyy/space-tourism-landing-page",
+  },
 ];

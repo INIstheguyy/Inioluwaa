@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  color: white;
+  color: #f5f5f5;
   font-family: "Crimson Pro", serif;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: background, backdrop-filter, height;
@@ -36,7 +36,7 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(110, 69, 226, 0.5) 50%,
+    rgba(255, 255, 255, 0.5) 50%,
     transparent 100%
   );
 }
@@ -69,8 +69,8 @@
 }
 
 .logo img:hover {
-  border-color: rgba(110, 69, 226, 0.5);
-  box-shadow: 0 0 20px rgba(110, 69, 226, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .navbar.scrolled .logo img {
@@ -100,11 +100,11 @@
 }
 
 .desktopLinks a:hover {
-  color: #6e45e2;
+  color: #ffffff;
 }
 
 .desktopLinks a.activeLink {
-  color: #6e45e2;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -115,7 +115,7 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #6e45e2, #88d3ce);
+  background: linear-gradient(90deg, #f5f5f5, #ffffff);
   border-radius: 2px;
   animation: slideIn 0.3s ease;
 }
@@ -132,7 +132,7 @@
   justify-content: center;
   background: none;
   border: none;
-  color: white;
+  color: #f5f5f5;
   cursor: pointer;
   z-index: 1100;
   padding: 0.5rem;
@@ -142,7 +142,7 @@
 
 .hamburger:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #6e45e2;
+  color: #ffffff;
 }
 
 /* Backdrop for mobile menu */
@@ -181,7 +181,7 @@
 .mobileMenuHeader {
   padding: 2rem 2rem 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(110, 69, 226, 0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .mobileMenuLogo {
@@ -194,13 +194,13 @@
   height: 45px;
   width: 45px;
   border-radius: 50%;
-  border: 2px solid rgba(110, 69, 226, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .mobileMenuLogo span {
   font-size: 1.3rem;
   font-weight: 600;
-  background: linear-gradient(45deg, #6e45e2, #88d3ce);
+  background: linear-gradient(45deg, #ffffff, #f5f5f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -229,16 +229,16 @@
 }
 
 .mobileNavItems a:hover {
-  background: rgba(110, 69, 226, 0.1);
-  border-color: rgba(110, 69, 226, 0.2);
-  color: #6e45e2;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   transform: translateX(8px);
 }
 
 .mobileNavItems a.activeMobileLink {
-  background: rgba(110, 69, 226, 0.15);
-  border-color: rgba(110, 69, 226, 0.3);
-  color: #6e45e2;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -277,29 +277,29 @@
 }
 
 .socialLinks a:hover {
-  background: rgba(110, 69, 226, 0.1);
-  border-color: rgba(110, 69, 226, 0.3);
-  color: #6e45e2;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
 }
 
 /* Mobile CTA */
 .mobileCta a {
   display: block;
   padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, #6e45e2, #88d3ce);
-  color: white;
+  background: linear-gradient(135deg, #ffffff, #f5f5f5);
+  color: #000000;
   text-decoration: none;
   border-radius: 25px;
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(110, 69, 226, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
 }
 
 .mobileCta a:hover {
-  background: linear-gradient(135deg, #88d3ce, #6e45e2);
-  box-shadow: 0 6px 25px rgba(110, 69, 226, 0.4);
+  background: linear-gradient(135deg, #f5f5f5, #ffffff);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
 }
 

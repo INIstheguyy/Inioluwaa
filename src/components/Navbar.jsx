@@ -45,7 +45,6 @@ function Navbar({ isScrolled, scrollPosition }) {
 
   // Navigation items
   const navItems = [
-    { path: "/about", label: "About" },
     { path: "/project", label: "Projects" },
     { path: "/contact", label: "Contact" }
   ];

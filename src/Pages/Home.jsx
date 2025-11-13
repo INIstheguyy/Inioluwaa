@@ -1,12 +1,16 @@
 import React, { useRef } from "react";
 import styles from "../styles/Home.module.css";
 import contact from "../Assets/icon/contact.svg";
-
-import { FaGithub,  FaLinkedin, FaReddit, FaTwitter } from "react-icons/fa";
+import download from "../Assets/icon/download.svg";
+import photo from "../Assets/image/IMG_3535.jpg";
+import { FaGithub, FaLinkedin, FaReddit, FaTwitter } from "react-icons/fa";
 import { projectdetails } from "../Utils/ProjectDetails";
 import { useNavigate } from "react-router-dom";
 import ProjectTemp from "../components/ProjectTemp";
+import ExperienceTable from "../components/ExperienceTable";
 import { motion } from "framer-motion";
+import SkillCarousel from "../components/SkillCarousel";
+
 
 // Variants for header (letter-by-letter)
 // Header animation: entrance per letter
@@ -36,20 +40,14 @@ function Home() {
 
   return (
     <div>
-      <section className={styles.first_section} id="">
+      {/* Hero Section */}
+      <section className={styles.hero_section} id="">
         <div className={styles.hero_content}>
           <div className={styles.hero_content_text}>
             <div>
               <motion.p
                 className={styles.header}
-                initial={{ scale: 1 }}
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatDelay: 2,
-                  ease: "easeInOut",
-                }}
+
               >
                 {"Inioluwa ".split("").map((char, i) => (
                   <motion.span
@@ -67,14 +65,6 @@ function Home() {
 
               <motion.p
                 className={styles.header}
-                initial={{ scale: 1 }}
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatDelay: 2,
-                  ease: "easeInOut",
-                }}
               >
                 {"Komolafe".split("").map((char, i) => (
                   <motion.span
@@ -127,7 +117,7 @@ function Home() {
               </p>
             </div>
 
-            <div className={styles.action_right}>
+            {/* <div className={styles.action_right}>
               <a
                 href="https://www.linkedin.com/in/inioluwa-komolafe-5815a7380"
                 target="_blank"
@@ -156,13 +146,106 @@ function Home() {
               >
                 <FaReddit size={30} color="rgba(211, 233, 122, 1);" />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
-      {/* PROJECT SECTION */}
-      <section className={styles.second_section} id="projects">
+      {/* About Section */}
+      <section className={styles.about_section} id="about">
+        <div className={styles.about_content}>
+          <div className={styles.content_info}>
+            <div className={styles.info_text}>
+              <motion.p
+                className={styles.header}
+                initial={{ y: -60, opacity: 0 }} // start 60px above and invisible
+                animate={{ y: 0, opacity: 1 }} // drop to normal spot and fade in
+                transition={{
+                  duration: 1.7, // total animation time
+                  ease: [0.25, 0.8, 0.25, 1], // a smooth “ease-out” curve
+                }}
+              >
+                about me
+              </motion.p>
+              <p className={styles.sub_title}>
+                I’m a front-end developer with a fresh Computer Science degree
+                and a passion for building clean, accessible, and visually
+                engaging web experiences. My current work centers on modern
+                React development, but I’m also diving into mobile app
+                development to broaden my skill set and eventually transition
+                into full-stack engineering and Web3 projects.
+              </p>
+              <p className={styles.sub_title}>
+                Outside the editor, I’m fascinated by the analysis and business
+                of football—from tactical breakdowns to the economics behind the
+                sport. I have a deep curiosity for human psychology, often
+                exploring it through podcasts, as well as historical and
+                narcotics-related documentaries that reveal how people and
+                societies evolve.
+              </p>
+              <p className={styles.sub_title}>
+                At my core, I’m motivated by learning, problem-solving, and the
+                challenge of turning complex ideas into intuitive digital
+                experiences.
+              </p>
+              <p className={styles.sub_title}></p>
+            </div>
+            <div className={styles.about_action}>
+              <a
+                href="https://www.linkedin.com/in/inioluwa-komolafe-5815a7380"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin size={30} />
+              </a>
+              <a
+                href="https://github.com/INIstheguyy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub size={30} />
+              </a>
+              <a
+                href="https://x.com/INIstheguyy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter size={30} color="rgba(211, 233, 122, 1);" />
+              </a>
+              <a
+                href="https://www.reddit.com/user/INIstheguyy/"
+                aria-label="Instagram"
+                rel="noopener noreferrer"
+              >
+                <FaReddit size={30} color="rgba(211, 233, 122, 1);" />
+              </a>
+            </div>
+          </div>
+          <div className={styles.content_media}>
+            <div className={styles.skill_img}>
+              <img src={photo} alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.skills}>
+          <p className={styles.header}>Tech stack</p>
+          <div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              style={{ marginTop: "1rem" }}
+            >
+              <SkillCarousel direction="right" speed={40} />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className={styles.projects_section} id="projects">
         <div className={styles.projects_header}>
           <p className={styles.header}>Featured Projects</p>
           <p className={styles.sub_header}>
@@ -192,6 +275,25 @@ function Home() {
             more projects <img src={contact} alt="contact-me" />
           </span>
         </p>
+      </section>
+
+      {/* Experience Section */}
+      <section className={styles.experience_section} id="experience">
+        <div className={styles.experience}>
+                <div className={styles.experience_header}>
+                  <p className={styles.header}>Work History</p>
+                  <button>
+                    Download Resume
+                    <span>
+                      <img src={download} alt="contact-me" />
+                    </span>
+                  </button>
+                </div>
+      
+                <div className={styles.experience_content}>
+                  <ExperienceTable />
+          </div>
+        </div>
       </section>
     </div>
   );

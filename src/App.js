@@ -6,7 +6,6 @@ import { motion, useMotionValue, useTransform, useScroll } from "framer-motion";
 
 // Pages
 import Home from "./Pages/Home";
-import About from "./Pages/About";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
 
@@ -97,7 +96,6 @@ function App() {
           <main className={styles.mainContent}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
               <Route path="/project" element={<Project />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
@@ -111,7 +109,7 @@ function App() {
               © {curDate}
             </motion.p>
             <motion.p
-              whileHover={{ scale: 1.02, color: "#6e45e2" }}
+              whileHover={{ scale: 1.02, }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               Inistheguyy

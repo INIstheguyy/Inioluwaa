@@ -11,7 +11,6 @@ import ExperienceTable from "../components/ExperienceTable";
 import { motion } from "framer-motion";
 import SkillCarousel from "../components/SkillCarousel";
 
-
 // Variants for header (letter-by-letter)
 // Header animation: entrance per letter
 const headerVariants = {
@@ -45,10 +44,7 @@ function Home() {
         <div className={styles.hero_content}>
           <div className={styles.hero_content_text}>
             <div>
-              <motion.p
-                className={styles.header}
-
-              >
+              <motion.p className={styles.header}>
                 {"Inioluwa ".split("").map((char, i) => (
                   <motion.span
                     key={i}
@@ -63,9 +59,7 @@ function Home() {
                 ))}
               </motion.p>
 
-              <motion.p
-                className={styles.header}
-              >
+              <motion.p className={styles.header}>
                 {"Komolafe".split("").map((char, i) => (
                   <motion.span
                     key={i}
@@ -113,40 +107,21 @@ function Home() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                 Preview Projects
+                Preview Projects
               </p>
             </div>
 
-            {/* <div className={styles.action_right}>
-              <a
-                href="https://www.linkedin.com/in/inioluwa-komolafe-5815a7380"
-                target="_blank"
-                rel="noopener noreferrer"
+            <div className={styles.action_right}>
+              {/* <button
+                onClick={() => window.open("/INIOLUWA_KOMOLAFE.pdf", "_blank")}
+                className={styles.btn}
               >
-                <FaLinkedin size={30} />
-              </a>
-              <a
-                href="https://github.com/INIstheguyy"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub size={30}/>
-              </a>
-              <a
-                href="https://x.com/INIstheguyy"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter size={30} color="rgba(211, 233, 122, 1);"/>
-              </a>
-              <a
-                href="https://www.reddit.com/user/INIstheguyy/"
-                aria-label="Instagram"
-                 rel="noopener noreferrer"
-              >
-                <FaReddit size={30} color="rgba(211, 233, 122, 1);" />
-              </a>
-            </div> */}
+                Download Resume
+                <span>
+                  <img src={download} alt="contact-me" />
+                </span>
+              </button> */}
+            </div>
           </div>
         </div>
       </section>
@@ -280,18 +255,20 @@ function Home() {
       {/* Experience Section */}
       <section className={styles.experience_section} id="experience">
         <div className={styles.experience}>
-                <div className={styles.experience_header}>
-                  <p className={styles.header}>Work History</p>
-                  <button>
-                    Download Resume
-                    <span>
-                      <img src={download} alt="contact-me" />
-                    </span>
-                  </button>
-                </div>
-      
-                <div className={styles.experience_content}>
-                  <ExperienceTable />
+          <div className={styles.experience_header}>
+            <p className={styles.header}>Work History</p>
+            <button
+              onClick={() => window.open("/INIOLUWA_KOMOLAFE.pdf", "_blank")}
+            >
+              Download Resume
+              <span>
+                <img src={download} alt="contact-me" />
+              </span>
+            </button>
+          </div>
+
+          <div className={styles.experience_content}>
+            <ExperienceTable />
           </div>
         </div>
       </section>

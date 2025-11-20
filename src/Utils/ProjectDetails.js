@@ -7,6 +7,8 @@ import rpsgame from "../Assets/image/R-P-S-game.png";
 import filter from "../Assets/image/job-filter.png";
 import space from "../Assets/image/space-landing-page.png";
 import taskmanger from "../Assets/image/task-manager.png";
+import festival from "../Assets/image/screen-capture (5).webm";
+import exam2 from "../Assets/image/screen-capture (4).webm";
 
 export const projectdetails = [
   {
@@ -30,29 +32,6 @@ export const projectdetails = [
     year: "2025",
     liveUrl: "https://task-mgt-proj.netlify.app/",
     githubUrl: "https://github.com/INIstheguyy/task-mgt-app",
-  },
-
-  {
-    id: 3,
-    name: "Blog-post",
-    img: blogpost,
-    title: "Blog-post web app",
-    description:
-      "I created a blog-post using react. The website performs ADD,DELETE & POST function using axios and stores data using a third-party DBMS.",
-    year: "2023",
-    liveUrl: "https://dnblogpost.netlify.app/",
-    githubUrl: "https://github.com/INIstheguyy/Blog-post",
-  },
-  {
-    id: 4,
-    name: "Job-listing",
-    img: filter,
-    title: "static-job-listings",
-    description:
-      "I built a job listing page getting it looking as close to the design as possible.The main functionality of this project is, it enables users to Filter job listings based on the categories,To add a filter, the user needs to click on the tablets on the right side of the listing on desktop or the bottom on mobile. For each filter added, only listings containing all selected filters should be returned.",
-    year: "2023",
-    liveUrl: "https://dnbjoblistingg.netlify.app",
-    githubUrl: "https://github.com/INIstheguyy/job-listing",
   },
 
   {
@@ -87,5 +66,26 @@ export const projectdetails = [
     year: "2023",
     liveUrl: "https://dnbspacetourism.netlify.app/",
     githubUrl: "https://github.com/INIstheguyy/space-tourism-landing-page",
+  },
+  {
+    id: 8,
+    name: "Exam Sense",
+    img: exam2,
+    title: "Mock WASSCE AI Exam web app ",
+    description:
+      "A smart practice testing platform that helps WASSCE candidates identify their weak topics through AI-powered analysis and get personalized study recommendations - turning practice tests into targeted learning paths",
+    year: "2025",
+    liveUrl: "https://exam-sense.netlify.app/",
+    githubUrl: "https://github.com/ExamSense/ExamSense.git",
+  },
+  {
+    id: 9,
+    name: "Festival Twin Finder",
+    img: festival,
+    title: "Festival Twin Finder",
+    description:
+      "Festival Twin Finder is an AI that translates culture, not just words. Upload any festival - whether it's a text description, photo, or video - and get equivalent experiences in your country within seconds. Our AI analyzes cultural events across six dimensions: spiritual significance, social function, visual aesthetics, emotional tone, historical context, and sensory experience. It then matches you with similar celebrations in your culture, complete with similarity scores and detailed explanations of what makes them alike and different",
+    liveUrl: "https://exam-sense.netlify.app/",
+    githubUrl: "https://github.com/ExamSense/ExamSense.git",
   },
 ];

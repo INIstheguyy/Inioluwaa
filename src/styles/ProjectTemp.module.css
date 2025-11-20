@@ -46,8 +46,6 @@
   padding: 5px 0;
 }
 
-
-
 .title {
   font-size: 1.6rem;
   font-weight: bold;
@@ -97,6 +95,17 @@
   opacity: 0.8;
 }
 
+/* Style for video backgrounds */
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Same as background-size: cover */
+  z-index: 0; /* Behind the overlay */
+} 
+
 @media (min-width: 1024px) {
   .template:hover {
     transform: scale(1.05);
@@ -117,7 +126,7 @@
     transform: translateY(0);
   }
 
-  .title{
+  .title {
     font-size: 2.4rem;
   }
 }

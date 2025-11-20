@@ -36,21 +36,45 @@ function ProjectTemp({
     else control.start("exit");
   }, [control, inView]);
 
+  const isVideo =
+    projectImage?.endsWith(".mp4") ||
+    projectImage?.endsWith(".webm") ||
+    projectImage?.endsWith(".mov");
+
   return (
     <motion.section
       ref={ref}
       className={styles.template}
-      style={{
-        backgroundImage: `url(${projectImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      style={
+        !isVideo
+          ? {
+              backgroundImage: `url(${projectImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }
+          : {}
+      }
       variants={variants}
       custom={index}
       initial="hidden"
       animate={control}
     >
+      {/* 🎥 If it's a video, render a <video> element */}
+      {isVideo && (
+        <video
+          className={styles.backgroundVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source
+            src={projectImage}
+            type={`video/${projectImage.split(".").pop()}`}
+          />
+        </video>
+      )}
       {/* Overlay */}
       <div className={styles.overlay}>
         <div className={styles.temp_info}>

@@ -32,9 +32,9 @@ export default function Contact() {
         </p>
         <p className={styles.description}>
           Need more info? Grab my{" "}
-          <a href={".."} className={styles.highlight}>
+          <span onClick={() => window.open('/INIOLUWA_KOMOLAFE.pdf', '_blank')} className={styles.highlight}>
             resume
-          </a>
+          </span>
         </p>
 
         <div className={styles.socials}>

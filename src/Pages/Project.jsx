@@ -42,7 +42,7 @@ function Project() {
       </section>
       <section id="" className={styles.second_section}>
         <div className={styles.projects_body}>
-          {projectdetails.map((projectdetail, index) => (
+          {projectdetails.slice().reverse().map((projectdetail, index) => (
             <ProjectTemp
               key={index}
               liveUrl={projectdetail.liveUrl}

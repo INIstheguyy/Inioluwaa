@@ -413,7 +413,7 @@
 .mobileNavItems a:focus-visible,
 .socialLinks a:focus-visible,
 .mobileCta a:focus-visible {
-  outline: 2px solid #6e45e2;
+  /* outline: 2px solid #6e45e2; */
   outline-offset: 2px;
 }
 

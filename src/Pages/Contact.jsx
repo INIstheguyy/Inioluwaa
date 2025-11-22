@@ -33,7 +33,7 @@ export default function Contact() {
         <p className={styles.description}>
           Need more info? Grab my{" "}
           <span onClick={() => window.open('/INIOLUWA_KOMOLAFE.pdf', '_blank')} className={styles.highlight}>
-            resume
+            résumé
           </span>
         </p>
 

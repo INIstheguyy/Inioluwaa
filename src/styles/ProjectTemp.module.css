@@ -104,6 +104,8 @@
   height: 100%;
   object-fit: cover; /* Same as background-size: cover */
   z-index: 0; /* Behind the overlay */
+  -webkit-playsinline: true;
+  webkit-playsinline: true;
 } 
 
 @media (min-width: 1024px) {

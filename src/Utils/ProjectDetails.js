@@ -7,21 +7,11 @@ import rpsgame from "../Assets/image/R-P-S-game.png";
 import filter from "../Assets/image/job-filter.png";
 import space from "../Assets/image/space-landing-page.png";
 import taskmanger from "../Assets/image/task-manager.png";
-import festival from "../Assets/image/screen-capture (5).webm";
-import exam2 from "../Assets/image/screen-capture (4).webm";
+import festival from "../Assets/image/screen-capture (5).mp4";
+import exam2 from "../Assets/image/screen-capture (4).mp4";
 
 export const projectdetails = [
-  {
-    id: 1,
-    name: "REST Countries API",
-    img: countryApi,
-    title: "REST Countries API with color theme switcher",
-    description:
-      "The  challenge was to integrate with the [REST Countries API] to pull country data and display it like in the designs.Also,Your users should be able to See all countries from the API on the homepage, Search for a country using an `input` field, Filter countries by region etc",
-    year: "2024",
-    liveUrl: "https://countriesrestapii.netlify.app/",
-    githubUrl: "https://github.com/INIstheguyy/REST-API-countries",
-  },
+
   {
     id: 2,
     name: "Task-Manager",
@@ -84,8 +74,8 @@ export const projectdetails = [
     img: festival,
     title: "Festival Twin Finder",
     description:
-      "Festival Twin Finder is an AI that translates culture, not just words. Upload any festival - whether it's a text description, photo, or video - and get equivalent experiences in your country within seconds. Our AI analyzes cultural events across six dimensions: spiritual significance, social function, visual aesthetics, emotional tone, historical context, and sensory experience. It then matches you with similar celebrations in your culture, complete with similarity scores and detailed explanations of what makes them alike and different",
-    liveUrl: "https://exam-sense.netlify.app/",
-    githubUrl: "https://github.com/ExamSense/ExamSense.git",
+      "Festival Twin Finder is an AI that translates culture, not just words. Upload any festival - whether it's a text description, photo, or video - and get equivalent experiences in your country within seconds.",
+    liveUrl: "https://festival-twin-finder.netlify.app/",
+    githubUrl: "https://github.com/ExamSense/festival-twin-seeker",
   },
 ];

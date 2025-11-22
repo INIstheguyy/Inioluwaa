@@ -1,6 +1,6 @@
 .first_section {
   /* padding: 30px; */
-  text-align: justify;
+  /* text-align: justify; */
   /* height: 100vh; */
   display: flex;
   /* margin-top: 10rem; */
@@ -29,7 +29,7 @@
   }
 }
 .second_section {
-  padding: 10px;
+  padding: 10px 0;
 }
 .projects_body {
  
@@ -39,7 +39,7 @@
   gap: 100px; /* reduced for better spacing */
 
 
-  padding: 5px 7px; /* avoids scrollbar overlapping content */
+  padding: 5px 0; /* avoids scrollbar overlapping content */
   flex: 1 1 auto; /* fill remaining vertical space */
   scroll-snap-type: y proximity;
 }

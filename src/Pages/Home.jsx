@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
 import styles from "../styles/Home.module.css";
 import contact from "../Assets/icon/contact.svg";
-import download from "../Assets/icon/download.svg";
 import photo from "../Assets/image/IMG_3535.jpg";
 import { FaGithub, FaLinkedin, FaReddit, FaTwitter } from "react-icons/fa";
+import { SiReaddotcv } from "react-icons/si";
+import { GoProjectSymlink } from "react-icons/go";
 import { projectdetails } from "../Utils/ProjectDetails";
 import { useNavigate } from "react-router-dom";
 import ProjectTemp from "../components/ProjectTemp";
@@ -35,7 +36,7 @@ const subHeaderWordVariants = {
 function Home() {
   const navigate = useNavigate();
   const projectBodyRef = useRef(null); // new ref
-  const projectdetailsslice = projectdetails.slice(0, 3);
+  const projectdetailsslice = projectdetails.slice(-3).reverse();
 
   return (
     <div>
@@ -81,7 +82,7 @@ function Home() {
               initial="hidden"
               animate="visible"
             >
-              {"Front-end Engineer specializing in building scalable web applications with a strong focus on responsive design, modern UI, and creative user experiences.Right now I craft clean, accessible user interfaces while expanding into mobile app development, with an eye on creative front-end engineering and Web3"
+              {"Frontend engineer expanding into full-stack development. I craft accessible, responsive interfaces that grow with your needs—prioritizing clean code, user experience, and the systems underneath. Right now, I'm focused on understanding business ideas,user needs & how everything connects."
                 .split(" ")
                 .map((word, i) => (
                   <motion.span
@@ -107,20 +108,19 @@ function Home() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Preview Projects
+                <GoProjectSymlink size={20} />
+                Projects
               </p>
             </div>
 
             <div className={styles.action_right}>
-              {/* <button
+              <p
                 onClick={() => window.open("/INIOLUWA_KOMOLAFE.pdf", "_blank")}
                 className={styles.btn}
               >
-                Download Resume
-                <span>
-                  <img src={download} alt="contact-me" />
-                </span>
-              </button> */}
+                <SiReaddotcv size={20} />
+                Résumé
+              </p>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ function Home() {
                 about me
               </motion.p>
               <p className={styles.sub_title}>
-                I’m a front-end developer with a fresh Computer Science degree
+                I’m a front-end engineer with a fresh Computer Science degree
                 and a passion for building clean, accessible, and visually
                 engaging web experiences. My current work centers on modern
                 React development, but I’m also diving into mobile app
@@ -260,9 +260,9 @@ function Home() {
             <button
               onClick={() => window.open("/INIOLUWA_KOMOLAFE.pdf", "_blank")}
             >
-              Download Resume
+              résumé
               <span>
-                <img src={download} alt="contact-me" />
+                <SiReaddotcv color="white" size={20} />
               </span>
             </button>
           </div>

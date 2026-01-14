@@ -119,7 +119,7 @@ function Navbar({ isScrolled, scrollPosition }) {
                   className={({ isActive }) => isActive ? styles.activeLink : ''}
                 >
                   <motion.span
-                    whileHover={{ y: -2, color: "#6e45e2" }}
+                    whileHover={{ y: -2, color: "#afaeb2" }}
                     transition={{ type: "spring", stiffness: 300 }}
                     animate={{
                       fontSize: isScrolled ? "2.2rem" : "2.5rem"
@@ -203,7 +203,7 @@ function Navbar({ isScrolled, scrollPosition }) {
                     onClick={closeMobileMenu}
                     className={({ isActive }) => isActive ? styles.activeMobileLink : ''}
                   >
-                    <motion.span whileHover={{ x: 8, color: "#6e45e2" }}>
+                    <motion.span whileHover={{ x: 8, color: "#afaeb2" }}>
                       Home
                     </motion.span>
                   </NavLink>
@@ -221,7 +221,7 @@ function Navbar({ isScrolled, scrollPosition }) {
                       onClick={closeMobileMenu}
                       className={({ isActive }) => isActive ? styles.activeMobileLink : ''}
                     >
-                      <motion.span whileHover={{ x: 8, color: "#6e45e2" }}>
+                      <motion.span whileHover={{ x: 8, color: "#afaeb2" }}>
                         {item.label}
                       </motion.span>
                     </NavLink>
@@ -244,7 +244,7 @@ function Navbar({ isScrolled, scrollPosition }) {
                       href="https://github.com/INIstheguyy"
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05, color: "#6e45e2" }}
+                      whileHover={{ scale: 1.05, color: "#afaeb2" }}
                       whileTap={{ scale: 0.95 }}
                     >
                       GitHub 
@@ -253,7 +253,7 @@ function Navbar({ isScrolled, scrollPosition }) {
                       href="https://www.linkedin.com/in/inioluwa-komolafe-5815a7380"
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05, color: "#6e45e2" }}
+                      whileHover={{ scale: 1.05, color: "#afaeb2" }}
                       whileTap={{ scale: 0.95 }}
                     >
                       LinkedIn

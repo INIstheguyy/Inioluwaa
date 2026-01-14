@@ -22,7 +22,8 @@ export const experiences = [
   {
     id: 2,
     role: "Front-End Developer",
-    company: "Motormata",
+    company: "Agent Pro",
+    link: "https://my-agent-pro.netlify.app/",
     period: "May 2024 – Present",
     description:
       "Implement UI components in React, translate Figma designs to code, and refine user experience through modern web practices."

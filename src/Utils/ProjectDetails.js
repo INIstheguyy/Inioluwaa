@@ -9,6 +9,7 @@ import space from "../Assets/image/space-landing-page.png";
 import taskmanger from "../Assets/image/task-manager.png";
 import festival from "../Assets/image/screen-capture (5).mp4";
 import exam2 from "../Assets/image/screen-capture (4).mp4";
+import pattways from "../Assets/image/pattways.png";
 
 export const projectdetails = [
 
@@ -77,5 +78,14 @@ export const projectdetails = [
       "Festival Twin Finder is an AI that translates culture, not just words. Upload any festival - whether it's a text description, photo, or video - and get equivalent experiences in your country within seconds.",
     liveUrl: "https://festival-twin-finder.netlify.app/",
     githubUrl: "https://github.com/ExamSense/festival-twin-seeker",
+  },
+  {
+    id: 10,
+    name: "Pattways",
+    img: pattways,
+    title: " A personalized career discovery tool",
+    description:"An AI-powered career discovery tool that helps people find career paths they didn't know existed by understanding their unique context through intelligent conversation.",
+    liveUrl: "https://pattways.netlify.app/",
+    githubUrl: "https://github.com/INIstheguyy/career-compass",
   },
 ];
